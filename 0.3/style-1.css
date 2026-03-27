@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(
+    45deg,
+    #f0f0f0 25%,
+    #e0e0e0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 50%,
+    #f0f0f0 75%,
+    #e0e0e0 75%
+  );
+  background-size: 20px 20px;
+  padding: 20px;
+}
+.simple-box {
+  width: 200px;
+  background-color: #add8e6; /* lightblue */
+  padding: 20px;
+  border: 5px solid #000080; /* navy */
+  margin: 10px;
+  color: black;
+  font-weight: bold;
+}
+.neighbor-box {
+  width: 200px;
+  background-color: #90ee90; /* lightgreen */
+  padding: 15px;
+  border: 3px solid #006400; /* darkgreen */
+  margin: 10px;
+  color: black;
+  font-weight: bold;
+}

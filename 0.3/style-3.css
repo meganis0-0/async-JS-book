@@ -1,0 +1,28 @@
+.product-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* закругленные углы */
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень */
+  transition: transform 0.3s; /* плавная анимация */
+}
+.product-card:hover {
+  transform: translateY(-5px); /* поднимаем при наведении */
+}
+.price {
+  font-size: 24px;
+  color: #2c5aa0;
+  font-weight: bold;
+}
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #45a049;
+}

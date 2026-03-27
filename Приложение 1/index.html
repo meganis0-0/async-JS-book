@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика CSS: Пункты 5-9</title>
+    <style>
+      /* Общие стили */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      section {
+        background: white;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+      .example {
+        border: 2px dashed #ccc;
+        padding: 15px;
+        margin: 15px 0;
+        background: #fafafa;
+      }
+      /* Пункт 5: Блоковая модель */
+      .box-model-demo {
+        width: 300px;
+        height: 150px;
+        padding: 30px;
+        border: 10px solid #e74c3c;
+        margin: 20px;
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+      }
+      /* Пункт 6: Работа с текстом */
+      .text-example {
+        font-family: "Georgia", serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: center;
+        line-height: 1.8;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      /* Пункт 7: Цвета */
+      .color-box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-weight: bold;
+      }
+      /* Пункт 8: Flexbox */
+      .flex-container {
+        display: flex;
+        border: 2px solid #333;
+        padding: 10px;
+        margin: 10px 0;
+        min-height: 200px;
+      }
+      .flex-item {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        text-align: center;
+      }
+      /* Пункт 9: Позиционирование */
+      .position-example {
+        height: 300px;
+        border: 2px solid #7f8c8d;
+        position: relative;
+        margin: 20px 0;
+        background: #ecf0f1;
+      }
+      .position-box {
+        width: 80px;
+        height: 80px;
+        background: #9b59b6;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+      .static {
+        position: static;
+        background: #e74c3c;
+      }
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 30px;
+        background: #f39c12;
+      }
+      .absolute {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background: #2ecc71;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #e67e22;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+        background: #34495e;
+        z-index: 1000;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Практика CSS: Пункты 5-9</h1>
+    <!-- Пункт 5: Блоковая модель -->
+    <section>
+      <h2>5 Блоковая модель (Box Model)</h2>
+      <div class="box-model-demo">
+        <h3>Content Area</h3>
+        <p>width: 300px × height: 150px</p>
+      </div>
+      <div class="example">
+        <p><strong>CSS код:</strong></p>
+        <pre>
+.box-model-demo {
+width: 300px;
+height: 150px;
+padding: 30px;
+border: 10px solid #e74c3c;
+margin: 20px;
+background-color: #3498db;
+}</pre
+        >
+      </div>
+    </section>
+    <!-- Пункт 6: Работа с текстом -->
+    <section>
+      <h2>6 Работа с текстом</h2>
+      <div class="text-example">
+        Это пример стилизованного текста с использованием различных CSS-свойств
+        для работы с текстом. Здесь мы видим изменение шрифта, размера, цвета и
+        других параметров.
+      </div>
+      <div class="example">
+        <p><strong>CSS код:</strong></p>
+        <pre>
+.text-example {
+font-family: 'Georgia', serif;
+font-size: 20px;
+font-weight: bold;
+color: #2c3e50;
+text-align: center;
+line-height: 1.8;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}</pre
+        >
+      </div>
+    </section>
+    <!-- Пункт 7: Цвета в CSS -->
+    <section>
+      <h2>7 Цвета в CSS</h2>
+      <div>
+        <div class="color-box" style="background-color: red">red</div>
+        <div class="color-box" style="background-color: #ff0000">#ff0000</div>
+        <div class="color-box" style="background-color: rgb(255, 0, 0)">
+          rgb(255,0,0)
+        </div>
+        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.5)">
+          rgba(255,0,0,0.5)
+        </div>
+        <div class="color-box" style="background-color: hsl(0, 100%, 50%)">
+          hsl(0,100%,50%)
+        </div>
+      </div>
+      <div class="example">
+        <p><strong>CSS код:</strong></p>
+        <pre>
+.color-box {
+width: 100px;
+height: 100px;
+margin: 10px;
+display: inline-block;
+text-align: center;
+line-height: 100px;
+color: white;
+font-weight: bold;
+}</pre
+        >
+      </div>
+    </section>
+    <!-- Пункт 8: Flexbox -->
+    <section>
+      <h2>8 Flexbox - выравнивание элементов</h2>
+      <h3>justify-content: center</h3>
+      <div class="flex-container" style="justify-content: center">
+        <div class="flex-item">Элемент 1</div>
+        <div class="flex-item">Элемент 2</div>
+        <div class="flex-item">Элемент 3</div>
+      </div>
+      <h3>justify-content: space-between</h3>
+      <div class="flex-container" style="justify-content: space-between">
+        <div class="flex-item">Элемент 1</div>
+        <div class="flex-item">Элемент 2</div>
+        <div class="flex-item">Элемент 3</div>
+      </div>
+      <h3>align-items: center</h3>
+      <div class="flex-container" style="align-items: center; height: 150px">
+        <div class="flex-item">Элемент 1</div>
+        <div class="flex-item">Элемент 2</div>
+        <div class="flex-item">Элемент 3</div>
+      </div>
+      <div class="example">
+        <p><strong>CSS код:</strong></p>
+        <pre>
+    .flex-container {
+display: flex;
+border: 2px solid #333;
+padding: 10px;
+margin: 10px 0;
+min-height: 200px;
+}
+.flex-item {
+background-color: #4CAF50;
+color: white;
+padding: 20px;
+margin: 5px;
+text-align: center;
+}</pre
+        >
+      </div>
+    </section>
+    <!-- Пункт 9: Позиционирование -->
+    <section>
+      <h2>9 Позиционирование элементов</h2>
+      <div class="sticky">
+        Это sticky элемент - он прилипнет к верху при прокрутке
+      </div>
+      <div class="position-example">
+        <div class="position-box static">static</div>
+        <div class="position-box relative">relative</div>
+        <div class="position-box absolute">absolute</div>
+      </div>
+      <div class="position-box fixed">fixed</div>
+      <div class="example">
+        <p><strong>CSS код:</strong></p>
+        <pre>
+.position-example {
+height: 300px;
+border: 2px solid #7f8c8d;
+position: relative;
+margin: 20px 0;
+background: #ecf0f1;
+}
+.position-box {
+width: 80px;
+height: 80px;
+background: #9b59b6;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+}
+.static { position: static; }
+.relative { position: relative; top: 20px; left: 30px; }
+.absolute { position: absolute; top: 50px; right: 50px; }
+.fixed { position: fixed; bottom: 20px; right: 20px; }
+.sticky { position: sticky; top: 0; }</pre
+        >
+      </div>
+    </section>
+  </body>
+</html>
