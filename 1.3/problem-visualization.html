@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Демонстрация блокировки</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+      }
+      .blocked {
+        background-color: #ff4444;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Тест блокировки интерфейса</h1>
+    <button id="heavyButton">Запустить тяжелую операцию</button>
+    <button id="testButton">Проверить отзывчивость</button>
+    <button id="counterButton">Счетчик: <span>0</span></button>
+    <div id="status">Статус: Готов</div>
+    <script>
+      let counter = 0;
+      // Тяжелая блокирующая операция
+      function heavyCalculation() {
+        const status = document.getElementById("status");
+        status.textContent = "Статус: Выполняется тяжелая операция...";
+        // Блокируем основной поток на 5 секунд
+        const start = Date.now();
+        while (Date.now() - start < 5000) {
+          // Имитация сложных вычислений
+        }
+        status.textContent = "Статус: Операция завершена";
+        return "Результат вычислений";
+      }
+      // Обработчики кнопок
+      document
+        .getElementById("heavyButton")
+        .addEventListener("click", function () {
+          console.log(" Запуск тяжелой операции...");
+          const result = heavyCalculation();
+          console.log(" Результат:", result);
+        });
+      document
+        .getElementById("testButton")
+        .addEventListener("click", function () {
+          console.log(" Кнопка откликнулась!");
+          alert("Интерфейс работает!");
+        });
+      document
+        .getElementById("counterButton")
+        .addEventListener("click", function () {
+          counter++;
+          this.querySelector("span").textContent = counter;
+          console.log(` Счетчик: ${counter}`);
+        });
+    </script>
+  </body>
+</html>
